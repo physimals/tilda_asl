@@ -10,35 +10,21 @@
 
 #SBATCH --time=10:00:00
 
-#SBATCH --array=1-1
+#SBATCH --array=1-10
 
-module load fsl-img/6.0.4
+#module load fsl-img/6.0.5
+module load brc-pipelines-img
+module load oxfordasl-img
 
 Usage()
 {
-  echo "Usage: `basename $0` [OPTIONS]"
-  echo " "
-  echo " "
-  echo "OPTIONS:"
-  echo " "
-  echo " "
-  echo " --reference-file <Path>       (Mandatory) path to the reference image file"
-  echo " --mask-file <Path>            (Mandatory) path to the mask image file"
-  echo " --output-file <Path>          (Mandatory) path to the output file where the correlation values are written"
-  echo " --bids-dir <Path>             (Mandatory) path to BIDS directory"
-  echo " --subject-list-file <Path>    (Mandatory) path to a text file specifing the subject ids to process (one per line, without 'sub-' prefix)"
-  echo " -h | --help                   help"
-  echo " "
   echo " "
 }
 
 if [ $# -eq 0 ] ; then Usage; exit 0; fi
-
-module load fsl-img/6.0.4
 subject_path=
 subject="sub-${SLURM_ARRAY_TASK_ID}"
-subject_folder="BRC_result"
-
+rois_folder="../ukb_rois"
 
 while [ "$1" != "" ]
 do
@@ -55,6 +41,10 @@ do
     esac
     shift
 done
+
+subject_t1="${subject_path}/T1.nii"
+T1_subject_folder="BRC_T1_result"
+
 
 
 echo "Processing ${subject}"
@@ -93,30 +83,30 @@ mv "${subject_path}"/fieldmap_rads.nii.gz "${subject_path}"/new_fieldmap_rads.ni
 echo "Step 1 done."
 
 echo "Step 2 processing T1..."
-fsl_anat -i ${subject_path}/T1
+#fsl_anat -i ${subject_path}/T1
+#struc_preproc.sh --input ${subject_t1} --path ${subject_path} --subject ${T1_subject_folder} --freesurfer --subseg 
 echo "Step 2 done."
 
-echo "Step 3 processing asl..."
+echo "Step 3 processing asl and region analysis..."
 asl_file --data=${subject_path}/asldata --ntis=1 --iaf=ctb --ibf=tis --diff --mean=asldiffdata_mean
-#mcflirt -in ${subject_path}/asldata -out ${subject_path}/asldata_mc
 
-oxford_asl -i ${subject_path}/asldata.nii -o ${subject_path}/oxasl_voxel_calib --spatial --iaf=ctb --ibf=tis --tis 3.6 --casl --bolus 1.8 -c ${subject_path}/aslcalib --tr 10 --fslanat=${subject_path}/T1.anat --te=9 --slicedt=0.03 --mc --pvcorr --cmethod voxel 
-oxford_asl -i ${subject_path}/asldata.nii -o ${subject_path}/oxasl_distcorr_voxel_calib --spatial --iaf=ctb --ibf=tis --tis 3.6 --casl --bolus 1.8 -c ${subject_path}/aslcalib --tr 10 --fslanat=${subject_path}/T1.anat --te=9 --slicedt=0.03 --fmap=${subject_path}/new_fieldmap_rads --fmapmag=${subject_path}/new_fieldmap_mag --fmapmagbrain=${subject_path}/new_fieldmap_mag_brain --echospacing=0.0005 --pedir=-y --mc --pvcorr  --cmethod voxel  
+#region-analysis version
+oxford_asl -i ${subject_path}/asldata.nii -o ${subject_path}/oxford_asl_results --spatial --iaf=ctb --ibf=tis --tis 3.6 --casl --bolus 1.8 -c ${subject_path}/aslcalib --tr 10 -s ${subject_path}/${T1_subject_folder}/analysis/anatMRI/T1/processed/data/T1_unbiased.nii.gz --warp=${subject_path}/${T1_subject_folder}/analysis/anatMRI/T1/preproc/reg/T1_2_std_warp_field.nii.gz --sbrain=${subject_path}/${T1_subject_folder}/analysis/anatMRI/T1/processed/data/T1_unbiased_brain --te=9 --slicedt=0.03 --fmap=${subject_path}/new_fieldmap_rads --fmapmag=${subject_path}/fieldmap_magshift2 --fmapmagbrain=${subject_path}/new_fieldmap_mask --echospacing=0.0005 --pedir=-y --mc --pvcorr  --cmethod=both  --debug --region-analysis --region-analysis-atlas=${rois_folder}/HO_R_Cerebral_WM_thr80.nii.gz --region-analysis-atlas-labels=${rois_folder}/HO_R_Cerebral_WM_thr80.txt --region-analysis-atlas=${rois_folder}/HO_L_Cerebral_WM_thr80.nii.gz --region-analysis-atlas-labels=${rois_folder}/HO_L_Cerebral_WM_thr80.txt --region-analysis-atlas=${rois_folder}/MNI_seg_max_prob_masked_RandL.nii.gz --region-analysis-atlas-labels=${rois_folder}/MNI_seg_max_prob_masked_RandL.txt --region-analysis-atlas=${rois_folder}/VascularTerritories_ero.nii.gz --region-analysis-atlas-labels=${rois_folder}/VascularTerritories_ero.txt --region-analysis-save-rois
+#oxford_asl -i ${subject_path}/asldata.nii -o ${subject_path}/oxford_asl_results --spatial --iaf=ctb --ibf=tis --tis 3.6 --casl --bolus 1.8 -c ${subject_path}/aslcalib --tr 10 -s ${subject_path}/${T1_subject_folder}/analysis/anatMRI/T1/processed/data/T1_unbiased.nii.gz -t ${subject_path}/${T1_subject_folder}/analysis/anatMRI/T1/preproc/reg/T1_2_std.mat --te=9 --slicedt=0.03 --fmap=${subject_path}/new_fieldmap_rads --fmapmag=${subject_path}/fieldmap_magshift2 --fmapmagbrain=${subject_path}/new_fieldmap_mask --echospacing=0.0005 --pedir=-y --mc --pvcorr  --cmethod=both  --debug --region-analysis --region-analysis-atlas=${rois_folder}/HO_R_Cerebral_WM_thr80.nii.gz --region-analysis-atlas-labels=${rois_folder}/HO_R_Cerebral_WM_thr80.txt --region-analysis-atlas=${rois_folder}/HO_L_Cerebral_WM_thr80.nii.gz --region-analysis-atlas-labels=${rois_folder}/HO_L_Cerebral_WM_thr80.txt --region-analysis-atlas=${rois_folder}/MNI_seg_max_prob_masked_RandL.nii.gz --region-analysis-atlas-labels=${rois_folder}/MNI_seg_max_prob_masked_RandL.txt --region-analysis-atlas=${rois_folder}/VascularTerritories_ero.nii.gz --region-analysis-atlas-labels=${rois_folder}/VascularTerritories_ero.txt --region-analysis-save-rois
+
 echo "Step 3 done."
 
-echo "Step 4 analysing results..."
 
-echo "Running region analysis..."
-echo "Not done yet."
+echo "Step 4 analysing results..."
 
 echo "Creating a tigher brain mask for comparing the old and new results..."
 fslchfiletype NIFTI ${subject_path}/analysis/oxasl/native_space/perfusion_calib ${subject_path}/perfusion_calib
 fslchfiletype NIFTI ${subject_path}/analysis/oxasl_distcorr/native_space/perfusion_calib ${subject_path}/perfusion_calib_distcorr
 rm -rf ${subject_path}/processed
 mkdir ${subject_path}/processed
-bet ${subject_path}/T1.anat/T1 ${subject_path}/processed/T1_brain_mask -f 0.6 -o -g -0.3
-convert_xfm -omat ${subject_path}/oxasl_voxel_calib/native_space/struct2asl.mat -inverse ${subject_path}/oxasl_voxel_calib/native_space/asl2struct.mat
-flirt -applyxfm -in ${subject_path}/processed/T1_brain_mask -ref ${subject_path}/oxasl_voxel_calib/native_space/perfusion -out ${subject_path}/processed/brain_mask_inasl -interp trilinear -paddingsize 1 -init ${subject_path}/oxasl_voxel_calib/native_space/struct2asl.mat
+bet ${subject_path}/${T1_subject_folder}/analysis/anatMRI/T1/processed/data/T1 ${subject_path}/processed/T1_brain_mask -f 0.6 -o -g -0.3
+convert_xfm -omat ${subject_path}/oxford_asl_results/native_space/voxelwise/struct2asl.mat -inverse ${subject_path}/oxford_asl_results/native_space/voxelwise/asl2struct.mat
+flirt -applyxfm -in ${subject_path}/processed/T1_brain_mask -ref ${subject_path}/oxford_asl_results/native_space/voxelwise/perfusion -out ${subject_path}/processed/brain_mask_inasl -interp trilinear -paddingsize 1 -init ${subject_path}/oxford_asl_results/native_space/voxelwise/struct2asl.mat
 fslmaths ${subject_path}/processed/brain_mask_inasl -ero ${subject_path}/processed/brain_erode_mask_inasl
 
 echo "Producing motion traces..."
@@ -125,7 +115,21 @@ fsl_tsplot -i ${subject_path}/processed/asldata_mc.par  -t "rotations" -u 1 --st
 fsl_tsplot -i ${subject_path}/processed/asldata_mc.par  -t "translations" -u 1 --start=4 --finish=6 -a x,y,z -w 640 -h 200 -o ${subject_path}/processed/"${subject}_trans.png"
 echo "Step 4 done."
 
+
+ehco "Step 5 processing PWI..."
+#post analysis
+debug_folder=${subject_path}/oxford_asl_results/fsl_*_ox_asl
+debug_path=$(echo ${debug_folder})
+fslmaths ${debug_path}/diffdata_mean -Tmean ${debug_path}/pwi_cor
+applywarp -i ${debug_path}/asldata_orig.nii.gz -r ${debug_path}/nativeref.nii.gz -o ${debug_path}/asldata_mc_not_distco --premat=${debug_path}/asldata.cat --rel --interp=trilinear --paddingsize=1 --super --superlevel=a
+asl_file --data=${debug_path}/asldata_mc_not_distco --ntis=1 --iaf=ctb --ibf=tis --diff --mean=${debug_path}/diffdata_mc_not_distco_mean
+fslmaths ${debug_path}/diffdata_mc_not_distco_mean -Tmean ${debug_path}/pwi_mc_not_distco
+echo "Step 5 done."
+
+
+
 echo "${subject} done."
+
 
 
 

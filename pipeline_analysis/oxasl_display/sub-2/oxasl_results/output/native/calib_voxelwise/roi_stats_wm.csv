@@ -1,0 +1,97 @@
+name,Nvoxels,Mean,Std,Median,IQR,Precision-weighted mean,I2
+10%+GM,0,,,,,,
+10%+WM,1812,19.72,9.45,18.42,11.07,18.28,74
+80%+GM,0,,,,,,
+90%+WM,1812,19.72,9.45,18.42,11.07,18.28,74
+Right_Cerebral_White_Matter_80%+,562,16.61,8.432,15.34,8.161,14.61,63
+Left_Cerebral_White_Matter_80%+,547,19.76,10.88,18.04,10,18.03,71
+Right Caudate,8,,,,,,
+Right Cerebellum,67,20.07,8.239,19.2,12.21,21.62,73
+Right Frontal Lobe,218,21.14,10.51,19.43,10.69,18.56,66
+Right Insula,57,17.59,7.947,16.8,12.09,18.72,62
+Right Occipital Lobe,51,15.08,6.614,14.63,6.767,15.05,78
+Right Parietal Lobe,190,15.29,5.168,15.5,5.716,15.21,45
+Right Putamen,73,21.74,7.943,20.64,12.63,21.41,58
+Right Temporal Lobe,87,17.04,7.959,16.04,9.625,11.41,88
+Right Thalamus,82,21.85,6.439,21.23,8.161,21.72,37
+Left Caudate,31,23.55,9.886,22.49,13.5,23.01,73
+Left Cerebellum,77,22.02,8.637,22.66,11.52,23.87,68
+Left Frontal Lobe,231,25.35,14.22,22.64,13.99,22.55,78
+Left Insula,73,23.16,6.615,23,7.764,22.87,50
+Left Occipital Lobe,99,19.46,7.409,18.33,12.15,19.26,80
+Left Parietal Lobe,233,18.02,6.9,17.38,8.649,18.27,73
+Left Putamen,61,25.71,7.299,25.9,8.295,26.08,56
+Left Temporal Lobe,75,20.58,7.781,18.61,10.67,20.78,78
+Left Thalamus,73,21.54,8.34,19.53,11.66,21.91,69
+RICA,53,20.35,8.546,20.31,8.89,14.69,89
+LICA,124,25.19,9.973,23.94,11,23.89,77
+VBA,33,21.35,7.044,19.73,10.99,21.67,82
+Frontal Pole,1,,,,,,
+Insular Cortex,0,,,,,,
+Superior Frontal Gyrus,0,,,,,,
+Middle Frontal Gyrus,0,,,,,,
+"Inferior Frontal Gyrus, pars triangularis",0,,,,,,
+"Inferior Frontal Gyrus, pars opercularis",0,,,,,,
+Precentral Gyrus,0,,,,,,
+Temporal Pole,0,,,,,,
+"Superior Temporal Gyrus, anterior division",0,,,,,,
+"Superior Temporal Gyrus, posterior division",0,,,,,,
+"Middle Temporal Gyrus, anterior division",0,,,,,,
+"Middle Temporal Gyrus, posterior division",0,,,,,,
+"Middle Temporal Gyrus, temporooccipital part",0,,,,,,
+"Inferior Temporal Gyrus, anterior division",0,,,,,,
+"Inferior Temporal Gyrus, posterior division",0,,,,,,
+"Inferior Temporal Gyrus, temporooccipital part",0,,,,,,
+Postcentral Gyrus,0,,,,,,
+Superior Parietal Lobule,0,,,,,,
+"Supramarginal Gyrus, anterior division",0,,,,,,
+"Supramarginal Gyrus, posterior division",0,,,,,,
+Angular Gyrus,0,,,,,,
+"Lateral Occipital Cortex, superior division",0,,,,,,
+"Lateral Occipital Cortex, inferior division",0,,,,,,
+Intracalcarine Cortex,0,,,,,,
+Frontal Medial Cortex,0,,,,,,
+Juxtapositional Lobule Cortex (formerly Supplementary Motor Cortex),0,,,,,,
+Subcallosal Cortex,0,,,,,,
+Paracingulate Gyrus,0,,,,,,
+"Cingulate Gyrus, anterior division",0,,,,,,
+"Cingulate Gyrus, posterior division",0,,,,,,
+Precuneous Cortex,0,,,,,,
+Cuneal Cortex,0,,,,,,
+Frontal Orbital Cortex,0,,,,,,
+"Parahippocampal Gyrus, anterior division",0,,,,,,
+"Parahippocampal Gyrus, posterior division",0,,,,,,
+Lingual Gyrus,0,,,,,,
+"Temporal Fusiform Cortex, anterior division",0,,,,,,
+"Temporal Fusiform Cortex, posterior division",0,,,,,,
+Temporal Occipital Fusiform Cortex,0,,,,,,
+Occipital Fusiform Gyrus,0,,,,,,
+Frontal Operculum Cortex,0,,,,,,
+Central Opercular Cortex,0,,,,,,
+Parietal Operculum Cortex,0,,,,,,
+Planum Polare,0,,,,,,
+Heschl's Gyrus (includes H1 and H2),0,,,,,,
+Planum Temporale,0,,,,,,
+Supracalcarine Cortex,0,,,,,,
+Occipital Pole,1,,,,,,
+Left Cerebral White Matter,703,20.66,10.61,18.79,11.44,19.29,75
+Left Cerebral Cortex,14,24.28,5.131,24.07,7.793,23.64,62
+Left Lateral Ventricle,0,,,,,,
+Left Thalamus,17,25.71,9.855,24.86,16.83,25.88,81
+Left Caudate,0,,,,,,
+Left Putamen,12,31.13,4.619,31.35,6.139,31.06,16
+Left Pallidum,8,,,,,,
+Brain-Stem,113,19.78,7.733,20.3,11.75,21.57,28
+Left Hippocampus,0,,,,,,
+Left Amygdala,0,,,,,,
+Left Accumbens,0,,,,,,
+Right Cerebral White Matter,736,17.37,8.278,16.03,8.751,15.35,70
+Right Cerebral Cortex,8,,,,,,
+Right Lateral Ventricle,0,,,,,,
+Right Thalamus,15,29.76,6.214,28.29,8.658,29.11,42
+Right Caudate,0,,,,,,
+Right Putamen,17,28.12,4.314,28.29,6.428,28.11,0
+Right Pallidum,3,,,,,,
+Right Hippocampus,0,,,,,,
+Right Amygdala,0,,,,,,
+Right Accumbens,0,,,,,,

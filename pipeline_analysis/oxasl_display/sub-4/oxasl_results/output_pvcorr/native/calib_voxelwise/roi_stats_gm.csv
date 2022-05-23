@@ -1,0 +1,97 @@
+name,Nvoxels,Mean,Std,Median,IQR,Precision-weighted mean,I2
+10%+GM,13395,81.92,40.8,82.44,46.35,1.176e-05,99
+10%+WM,8216,78.66,31.35,80.2,39.01,2.078e-05,98
+80%+GM,705,64.73,24.27,61.34,31.91,7.637e-05,99
+90%+WM,0,,,,,,
+Right_Cerebral_White_Matter_80%+,245,78.73,31.98,82.34,40.85,82.17,71
+Left_Cerebral_White_Matter_80%+,272,78.34,29.39,80.31,38.4,6.246e-05,95
+Right Caudate,93,67.31,33.4,80.27,57.18,69.22,82
+Right Cerebellum,557,60.3,21.62,56.35,21.94,8.79e-05,98
+Right Frontal Lobe,2483,89.51,43.35,90.99,44.47,9.088e-06,99
+Right Insula,169,76.56,21.34,75.52,31.51,72.85,61
+Right Occipital Lobe,1013,85.74,40.31,80.92,37.37,4.36e-05,99
+Right Parietal Lobe,1734,102,29.48,98.25,33.72,0.001946,99
+Right Putamen,126,75.65,30.38,78.59,49.93,72.28,75
+Right Temporal Lobe,1481,68.1,39.43,70.18,45.43,3.965e-06,98
+Right Thalamus,126,106.9,33.86,99.54,45.35,104.3,85
+Left Caudate,180,63.68,30.6,64.98,49.17,65.08,79
+Left Cerebellum,544,56.79,15.73,55.47,15.81,5.956e-05,98
+Left Frontal Lobe,2561,85.26,43.63,88.23,47.5,7.878e-06,99
+Left Insula,227,80.32,23.42,80.3,36.07,74.89,76
+Left Occipital Lobe,1200,75.29,37.18,72.15,36.47,2.737e-05,99
+Left Parietal Lobe,1629,92.28,31.55,91.16,36.97,0.0004122,99
+Left Putamen,148,78.79,25.69,82.13,38.46,73.97,60
+Left Temporal Lobe,1499,62.53,39.18,62.93,48.61,3.232e-06,98
+Left Thalamus,140,88.58,34.45,85.71,44.23,89.29,86
+RICA,3174,90.22,41.23,91.02,42.31,1.321e-05,99
+LICA,3836,82.09,42.5,85.11,47,7.82e-06,99
+VBA,1772,74.34,34.17,70.7,35.54,2.921e-05,99
+Frontal Pole,612,85.79,46.56,90.33,56.88,5.985e-06,98
+Insular Cortex,52,59.45,12.48,58.24,16.29,58.23,51
+Superior Frontal Gyrus,25,108,40.92,92.66,46.83,92.91,95
+Middle Frontal Gyrus,64,118.4,30.58,114,34.21,119,91
+"Inferior Frontal Gyrus, pars triangularis",8,,,,,,
+"Inferior Frontal Gyrus, pars opercularis",20,76.46,25.85,81.62,35.81,78.88,75
+Precentral Gyrus,90,98.81,30.8,96.67,33.16,94.69,89
+Temporal Pole,148,35.74,36.67,41.57,65.33,5.341e-07,94
+"Superior Temporal Gyrus, anterior division",0,,,,,,
+"Superior Temporal Gyrus, posterior division",10,131,29.43,115.6,39.67,115.7,65
+"Middle Temporal Gyrus, anterior division",8,,,,,,
+"Middle Temporal Gyrus, posterior division",41,109.1,39.01,101.5,46.01,96.36,80
+"Middle Temporal Gyrus, temporooccipital part",38,88.88,22.06,89.73,29.45,85.7,82
+"Inferior Temporal Gyrus, anterior division",3,,,,,,
+"Inferior Temporal Gyrus, posterior division",8,,,,,,
+"Inferior Temporal Gyrus, temporooccipital part",27,76.95,20.77,75.23,29.06,71.68,64
+Postcentral Gyrus,90,94.97,34.43,87.35,34.06,83.65,92
+Superior Parietal Lobule,26,108.2,39.13,92.52,44.41,90.62,89
+"Supramarginal Gyrus, anterior division",29,90.19,22.41,90.73,28.73,83.39,88
+"Supramarginal Gyrus, posterior division",21,120.6,53.65,104.2,38.09,107.3,95
+Angular Gyrus,44,109.7,26.63,107.8,32.47,102.3,86
+"Lateral Occipital Cortex, superior division",304,96.17,39.27,94.13,41.9,94.27,94
+"Lateral Occipital Cortex, inferior division",108,88.81,23.06,85.07,26.68,0.0001999,99
+Intracalcarine Cortex,9,,,,,,
+Frontal Medial Cortex,30,29.95,45.23,0,60.89,2.133e-07,91
+Juxtapositional Lobule Cortex (formerly Supplementary Motor Cortex),44,92.72,17.91,90.54,18.97,92.88,72
+Subcallosal Cortex,42,41.4,25.16,41.09,46.3,39.26,73
+Paracingulate Gyrus,82,102.5,27.62,97.22,39.38,89.48,88
+"Cingulate Gyrus, anterior division",104,80.5,24.09,74.71,26.23,74.43,83
+"Cingulate Gyrus, posterior division",66,104.8,22.95,99.97,25.2,102.7,78
+Precuneous Cortex,166,99.46,24.75,95.47,32.99,93.93,90
+Cuneal Cortex,15,70.35,17.68,75.46,29.51,65.19,86
+Frontal Orbital Cortex,83,71.64,26.55,73.3,32.62,6.436e-06,94
+"Parahippocampal Gyrus, anterior division",17,18.77,21.08,0,35.79,2.539e-07,82
+"Parahippocampal Gyrus, posterior division",5,,,,,,
+Lingual Gyrus,70,72.2,13.17,70.85,16.6,74.81,35
+"Temporal Fusiform Cortex, anterior division",7,,,,,,
+"Temporal Fusiform Cortex, posterior division",23,43.36,21.25,45.71,22.21,5.465e-06,96
+Temporal Occipital Fusiform Cortex,14,60.26,15.1,54.49,16.86,57.19,46
+Occipital Fusiform Gyrus,16,68.58,24.18,61.52,25.42,68.45,78
+Frontal Operculum Cortex,1,,,,,,
+Central Opercular Cortex,33,93.61,18.87,92.7,29.24,89.06,62
+Parietal Operculum Cortex,8,,,,,,
+Planum Polare,1,,,,,,
+Heschl's Gyrus (includes H1 and H2),0,,,,,,
+Planum Temporale,0,,,,,,
+Supracalcarine Cortex,0,,,,,,
+Occipital Pole,142,98.77,38.57,94.52,48.2,85.88,96
+Left Cerebral White Matter,1142,79.26,31.99,81.35,40.62,2.151e-05,98
+Left Cerebral Cortex,3771,83.34,39.63,83.31,43.55,1.512e-05,99
+Left Lateral Ventricle,23,70.62,58.76,40.29,68.69,63.51,95
+Left Thalamus,54,102.1,28.9,107.8,45.15,96.77,81
+Left Caudate,21,91.37,18.3,87.16,31.06,84.97,72
+Left Putamen,30,103.1,15.77,103.1,18.08,97.87,6
+Left Pallidum,0,,,,,,
+Brain-Stem,27,77.46,29.3,76.58,47.27,72.85,67
+Left Hippocampus,23,48.09,10.61,48.43,16.71,45.17,38
+Left Amygdala,9,,,,,,
+Left Accumbens,2,,,,,,
+Right Cerebral White Matter,1071,84.7,30.44,87.42,36.74,8.021e-05,98
+Right Cerebral Cortex,3739,89.9,39.61,89.32,40.19,1.963e-05,99
+Right Lateral Ventricle,3,,,,,,
+Right Thalamus,53,128.5,33.19,127,53.52,125.3,87
+Right Caudate,25,90.77,17.52,87.3,26.73,87.74,60
+Right Putamen,30,102.1,18.32,102.8,19.72,99.86,21
+Right Pallidum,0,,,,,,
+Right Hippocampus,27,70.83,32.59,56.48,29,60.42,88
+Right Amygdala,16,51.56,10.53,48.43,14.42,49.55,20
+Right Accumbens,2,,,,,,

@@ -1,0 +1,97 @@
+name,Nvoxels,Mean,Std,Median,IQR,Precision-weighted mean,I2
+10%+GM,0,,,,,,
+10%+WM,1890,19.31,10.32,17.71,12.5,17.95,87
+80%+GM,0,,,,,,
+90%+WM,1890,19.31,10.32,17.71,12.5,17.95,87
+Right_Cerebral_White_Matter_80%+,553,15.46,9.357,13.53,8.838,14.53,85
+Left_Cerebral_White_Matter_80%+,539,16.58,8.034,15.63,8.119,16.13,79
+Right Caudate,3,,,,,,
+Right Cerebellum,47,22.62,10.36,26.32,17.28,21.11,85
+Right Frontal Lobe,299,17.28,7.002,16.83,9.793,16.74,68
+Right Insula,43,16.37,6.126,14.71,8.39,13.65,37
+Right Occipital Lobe,63,17.5,12.81,13.03,19.01,15.36,95
+Right Parietal Lobe,223,14.94,12.12,12.17,10.63,14.53,92
+Right Putamen,34,27.44,5.786,27.13,6.737,27.54,38
+Right Temporal Lobe,108,20.17,11.39,18.28,16.96,18.31,90
+Right Thalamus,91,22.86,9.318,21.05,9.175,23.39,79
+Left Caudate,33,23.3,8.434,21.69,9.941,22.57,65
+Left Cerebellum,73,28.14,6.88,29,10.46,27.72,62
+Left Frontal Lobe,321,18.33,7.47,17.56,8.246,17.82,66
+Left Insula,37,23.43,8.461,21.56,9.206,20.92,65
+Left Occipital Lobe,89,17.81,10.32,15.93,12.91,17.15,91
+Left Parietal Lobe,229,16.54,11.09,14.52,10.62,17,91
+Left Putamen,43,27.4,8.218,26.82,9.841,25.45,67
+Left Temporal Lobe,88,17.34,9.373,16.08,9.705,17.34,84
+Left Thalamus,94,26.06,9.972,24.53,13.95,24.67,79
+RICA,88,21.5,10.88,21.59,14.54,20.38,88
+LICA,184,20.02,10.05,18.38,11.56,20.09,86
+VBA,50,22.65,11.21,21.69,14.84,20.36,94
+Frontal Pole,4,,,,,,
+Insular Cortex,0,,,,,,
+Superior Frontal Gyrus,0,,,,,,
+Middle Frontal Gyrus,0,,,,,,
+"Inferior Frontal Gyrus, pars triangularis",0,,,,,,
+"Inferior Frontal Gyrus, pars opercularis",0,,,,,,
+Precentral Gyrus,0,,,,,,
+Temporal Pole,0,,,,,,
+"Superior Temporal Gyrus, anterior division",0,,,,,,
+"Superior Temporal Gyrus, posterior division",0,,,,,,
+"Middle Temporal Gyrus, anterior division",0,,,,,,
+"Middle Temporal Gyrus, posterior division",0,,,,,,
+"Middle Temporal Gyrus, temporooccipital part",0,,,,,,
+"Inferior Temporal Gyrus, anterior division",0,,,,,,
+"Inferior Temporal Gyrus, posterior division",0,,,,,,
+"Inferior Temporal Gyrus, temporooccipital part",0,,,,,,
+Postcentral Gyrus,0,,,,,,
+Superior Parietal Lobule,0,,,,,,
+"Supramarginal Gyrus, anterior division",0,,,,,,
+"Supramarginal Gyrus, posterior division",0,,,,,,
+Angular Gyrus,0,,,,,,
+"Lateral Occipital Cortex, superior division",1,,,,,,
+"Lateral Occipital Cortex, inferior division",0,,,,,,
+Intracalcarine Cortex,0,,,,,,
+Frontal Medial Cortex,0,,,,,,
+Juxtapositional Lobule Cortex (formerly Supplementary Motor Cortex),0,,,,,,
+Subcallosal Cortex,0,,,,,,
+Paracingulate Gyrus,0,,,,,,
+"Cingulate Gyrus, anterior division",3,,,,,,
+"Cingulate Gyrus, posterior division",1,,,,,,
+Precuneous Cortex,2,,,,,,
+Cuneal Cortex,0,,,,,,
+Frontal Orbital Cortex,1,,,,,,
+"Parahippocampal Gyrus, anterior division",0,,,,,,
+"Parahippocampal Gyrus, posterior division",0,,,,,,
+Lingual Gyrus,0,,,,,,
+"Temporal Fusiform Cortex, anterior division",0,,,,,,
+"Temporal Fusiform Cortex, posterior division",0,,,,,,
+Temporal Occipital Fusiform Cortex,0,,,,,,
+Occipital Fusiform Gyrus,0,,,,,,
+Frontal Operculum Cortex,0,,,,,,
+Central Opercular Cortex,0,,,,,,
+Parietal Operculum Cortex,0,,,,,,
+Planum Polare,0,,,,,,
+Heschl's Gyrus (includes H1 and H2),0,,,,,,
+Planum Temporale,0,,,,,,
+Supracalcarine Cortex,0,,,,,,
+Occipital Pole,0,,,,,,
+Left Cerebral White Matter,728,17.42,8.572,16.34,8.954,17.05,82
+Left Cerebral Cortex,36,24,12.92,22.08,15.17,24.22,92
+Left Lateral Ventricle,0,,,,,,
+Left Thalamus,22,37.84,6.204,38.82,10.06,37.67,45
+Left Caudate,0,,,,,,
+Left Putamen,0,,,,,,
+Left Pallidum,13,22.44,6.068,22.32,9.588,22.84,31
+Brain-Stem,99,30.45,7.944,31.11,8.601,29.08,67
+Left Hippocampus,0,,,,,,
+Left Amygdala,0,,,,,,
+Left Accumbens,0,,,,,,
+Right Cerebral White Matter,755,16.75,9.963,14.67,10.49,15.95,88
+Right Cerebral Cortex,33,20.95,9.477,22.46,13.5,19.11,89
+Right Lateral Ventricle,0,,,,,,
+Right Thalamus,12,40.29,6.721,40.83,8.574,41.11,62
+Right Caudate,0,,,,,,
+Right Putamen,6,,,,,,
+Right Pallidum,13,23.57,5.305,21.13,7.313,24.01,36
+Right Hippocampus,0,,,,,,
+Right Amygdala,0,,,,,,
+Right Accumbens,0,,,,,,
