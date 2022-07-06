@@ -47,8 +47,7 @@ Some results(of 10 subjects) are produced for checking. For oxford_asl, the outp
 
 
 
-# TILDA Description
-### Jian Hu 21.6.2022
+# Processed TILDA Description
 
 
 ## Data Description
@@ -77,19 +76,26 @@ Duplicate subject: 1295763
 
 ## Processed results & Folder structure
 
-Raw data:
+### Raw data:
+
 T1_${SUBJECT_ID}.nii - T1 image
+
 fieldmap_*_${SUBJECT_ID}.nii - field maps
+
 aslcalib_${SUBJECT_ID}.nii - calibration image/ M0
+
 asldata_${SUBJECT_ID}.nii - perfusion image/pCASL
 
-T1 processing (BRC structural pipeline https://github.com/SPMIC-UoN/BRC_Pipeline):
+### T1 processing (BRC structural pipeline https://github.com/SPMIC-UoN/BRC_Pipeline):
+
 [BRC_T1] - structural processed folder
 
-Fieldmap processing (FSL)
+### Fieldmap processing (FSL):
+
 new_fieldmap_rads.nii.gz - fieldmap in radians
 
-Perfusion processing (oxasl https://github.com/physimals/oxasl):
+### Perfusion processing (oxasl https://github.com/physimals/oxasl):
+
 [oxasl] - oxasl processed folder
 
 
