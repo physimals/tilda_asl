@@ -1,6 +1,7 @@
-# tilda_asl
-Analysis pipeline code for ASL data from The Irish Longitudinal study on Ageing
+# TILDA_ASL
+Analysis pipeline code for ASL data from The Irish Longitudinal study on Ageing.
 
+Dataset description and previous analysis: https://github.com/physimals/tilda_asl/blob/main/TILDA_desc/.ipynb_checkpoints/TILDA%20pipeline%20analysis-checkpoint.ipynb 
 
 
 # Usage
