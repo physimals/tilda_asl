@@ -1,0 +1,23 @@
+baseline empty subjects:
+1276403
+1274950
+1291193
+1335474
+1274948
+1281290
+1285673
+1311582
+
+
+TILDA_ASL_Exclusions_1_10_21 empty subjects:
+1287829
+1286912
+1287833
+1287831
+
+
+CaoiASLmapscreening_SK have 4 more empty subjects compared to baseline:
+1287829
+1287833
+1287831
+1286912
