@@ -145,7 +145,7 @@ for SUBJDIR in $input_dir/sub-*; do
     ############
 
 
-    #####DK####################(standard space+native space)
+    #####DK####################
     ###############################################
     ############weighted
     mkdir -p  ${SUBJDIR}/processed/MNI/32k_fs_space/region_analysis/weighted/DK/pvc/left
