@@ -39,6 +39,9 @@ done
 
 for SUBJDIR in $subject_dir/sub-*; do
 	id=${SUBJDIR:0-7}
+
+	#sbatch TILDA_fieldmap_process.sh --path ${subject_dir} --output "${output_dir}/sub-${id}" --roi ${roi_dir} --id $id
+
 	sbatch TILDA_pipeline_oxasl.sh --path /gpfs01/share/TILDA/test_pipeline/DATA/sub-$id --output /gpfs01/share/TILDA/test_pipeline/DATA/sub-$id --roi /gpfs01/share/TILDA/test_pipeline/ukb_rois --id $id
 done
 

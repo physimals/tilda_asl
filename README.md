@@ -1,101 +1,32 @@
 # TILDA_ASL
 Analysis pipeline code for ASL data from The Irish Longitudinal study on Ageing.
 
-Dataset description and previous analysis: https://github.com/physimals/tilda_asl/blob/main/TILDA_desc/.ipynb_checkpoints/TILDA%20pipeline%20analysis-checkpoint.ipynb 
+
+## Data Characterics
+
+474 subjects (T1+pcASL) were available after preprocessing, and 423 subjects were used for this study, details were explained in the derived paper [1].
+
+## Pre-Processing pipeline
+
+All related processing scripts are located in the script folder.
+
+### T1w images
+
+T1 images were processed using HCP pipeline on High Performance Computer Ada of University of Nottingham.
+
+## ASL images
+
+Oxasl [2] was used to process the ASL data. Partial Volumes (PVs) from FAST were used for the volumetric pipeline, while PVs from Toblerone were used for the surface-based pipeline. Multimodel Suface Matching (MSM) from HCP workbench was used to project ASL images onto the cortical surface. 
 
 
-# Usage
+## Statistical Analysis
 
-1. files_copy.sh
 
-Copy raw data to work space. The integrity of each subject needs to be checked! Subjects with absent or duplicate data need to be fixed manually.
-
-Example usage: 
-``` 
-bash files_copy.sh --input /gpfs01/share/TILDA/Raw_nii_files_for_MC_pCASL_T1_B0_M0 --output  /gpfs01/share/TILDA/test_pipeline/DATA
-```
-
-2. TILDA_pipeline_t1.sh
-
-Run BRC structural pipeline for all subjects under specified folder.
-
-Example usage: 
-``` 
-bash TILDA_pipeline_t1.sh --path /gpfs01/share/TILDA/test_pipeline/DATA --output /gpfs01/share/TILDA/test_pipeline/DATA
-```
-
-3. TILDA_pipeline_oxasl.sh 
-
-Run oxasl for a single subject.
-
-Example usage: 
-``` 
-bash TILDA_oxasl_batch.sh --path /gpfs01/share/TILDA/test_pipeline/DATA --output /gpfs01/share/TILDA/test_pipeline/DATA --roi /gpfs01/share/TILDA/test_pipeline/ukb_rois  -id 1327832
-```
-
-4. TILDA_oxasl_batch.sh
-
-Run oxasl for all subjects under specified folder.
-
-Example usage: 
-``` 
-bash TILDA_oxasl_batch.sh --path /gpfs01/share/TILDA/test_pipeline/DATA --output /gpfs01/share/TILDA/test_pipeline/DATA --roi /gpfs01/share/TILDA/test_pipeline/ukb_rois
-```
+## Quality Control Report
 
 
 
-# Processed TILDA Description
+[1] Hu, J., Craig, M. S., Knight, S. P., De Looze, C., Meaney, J. F., Kenny, R. A., Chen, X., & Chappell, M. A. (2024). Regional changes in cerebral perfusion with age when accounting for changes in gray-matter volume. Magnetic resonance in medicine, 10.1002/mrm.30376. Advance online publication. https://doi.org/10.1002/mrm.30376
 
-
-## Data Description
-
-Total: 484
-
-Unusable: 5
-
-Duplicate: 1
-
-Usable: 478
-
-Raw data folder: /gpfs01/share/TILDA/Raw_nii_files_for_MC_pCASL_T1_B0_M0
-
-Current data folder:/gpfs01/share/TILDA/test_pipeline/DATA
-
-Data mapping relationships: /gpfs01/share/TILDA/test_pipeline/DATA/subjects_map.csv
-
-Subjects with incomplete data: 1316180,  1271915, 1289072, 1335474, 1268350 (unusable)
-
-Subjects with mutliple data:1326157, 1327419, 1322221, 1285670, 1309595, 1331415, 1330490 
-
-(some images are acquired mutliple times due to some reason(motion, artifact...), the latest one of each sequence is kept)
-
-Duplicate subject: 1295763
-
-## Processed results & Folder structure
-
-### Raw data:
-
-T1_${SUBJECT_ID}.nii - T1 image
-
-fieldmap_*_${SUBJECT_ID}.nii - field maps
-
-aslcalib_${SUBJECT_ID}.nii - calibration image/ M0
-
-asldata_${SUBJECT_ID}.nii - perfusion image/pCASL
-
-### T1 processing (BRC structural pipeline https://github.com/SPMIC-UoN/BRC_Pipeline):
-
-[BRC_T1] - structural processed folder
-
-### Fieldmap processing (FSL):
-
-new_fieldmap_rads.nii.gz - fieldmap in radians
-
-### Perfusion processing (oxasl https://github.com/physimals/oxasl):
-
-[oxasl] - oxasl processed folder
-
-
-
-
+[2] https://github.com/physimals/oxasl
 
